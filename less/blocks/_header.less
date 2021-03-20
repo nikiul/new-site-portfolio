@@ -1,0 +1,161 @@
+.header {
+    padding-top: 50px;
+    padding-bottom: 41px;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.header__title {
+    margin: 0;
+    margin-bottom: 39px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 130%;
+    text-transform: uppercase;
+}
+
+// .header__nav.header__nav.header__list {
+//     margin: 0;
+//     padding: 0;
+//     display: flex;
+
+// }
+
+// ..header__nav.header__list__item {
+//     margin: 0;
+//     margin-right: 59px;
+//     list-style-type: none;
+
+//     &:last-child {
+//         margin-right: 0;
+//     }
+// }
+
+// .item__link {
+//     padding: 8px;
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: 130%;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     color: #000;
+//     transition: color 0.2s ease-in;
+
+//     &:hover {
+//         color: #c3cfde;
+//     }
+// }
+
+// .item__link--active {
+//     color: #FF343D;
+// }
+
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+
+.active {
+    color: red;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+  
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+  
+nav.fill ul li a {
+    transition: all 2s;
+}
+  
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+
+/* Keyframes */
+@-webkit-keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #333;
+    }
+}

@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="libs/owl-carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="libs/owl-carousel/assets/owl.theme.default.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Портфолио</title>
 </head>
 <body>
     
-    <header class="header">
+    <header class="header header__bg">
 
         <div class="container">
 
-            <div class="header__content">
+            <div class="header__content header__content--border">
 
                 <a class="header__title-link" href="main-page.html">
                     <!-- <h1 class="header__title">Веб-разработка</h1> -->
@@ -36,7 +38,12 @@
                     </ul>
                 </nav>
 
+                
             </div>
+            
+            <a class="header__arrow-link" href="#about-us">
+                <img class="header__arrow" src="img/header/arrow-down.svg" alt="">
+            </a>
 
         </div>
 
@@ -44,7 +51,7 @@
 
     <main>
 
-        <div class="about-us">
+        <div id="about-us" class="about-us">
 
             <div class="container">
 
@@ -81,7 +88,7 @@
 
                         <div class="about-us__skills-title">Мои навыки</div>
 
-                        <div class="skills-wrap">
+                        <div class="owl-carousel owl-theme skills-wrap" id="skills-carousel1">
                             <div class="skills__item">
                                 <img src="img/aboutUs/aboutUs-html.ico" alt="HTML">
                                 <p class="skill_title"> HTML5</p>
@@ -134,7 +141,7 @@
 
                         <div class="about-us__skills-title">Мои навыки</div>
 
-                        <div class="skills-wrap">
+                        <div class="owl-carousel owl-theme skills-wrap" id="skills-carousel2">
                             <div class="skills__item">
                                 <img src="img/aboutUs/aboutUs-html.ico" alt="HTML">
                                 <p class="skill_title"> HTML5</p>
@@ -166,6 +173,110 @@
                         </div>
 
                     </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="projectFacts" class="sectionClass">
+            <div class="container">
+                <div class="fullWidth eight columns">
+                    <div class="projectFactsWrap ">
+                        <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
+                            <i class="fa fa-briefcase"></i>
+                            <p id="number1" class="number">12</p>
+                            <span></span>
+                            <p>Проектов завершено</p>
+                        </div>
+                        <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
+                            <i class="fa fa-smile-o"></i>
+                            <p id="number2" class="number">55</p>
+                            <span></span>
+                            <p>Довольных клиентов</p>
+                        </div>
+                        <!-- <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
+                            <i class="fa fa-coffee"></i>
+                            <p id="number3" class="number">359</p>
+                            <span></span>
+                            <p>Cups of coffee</p>
+                        </div>
+                        <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
+                            <i class="fa fa-camera"></i>
+                            <p id="number4" class="number">246</p>
+                            <span></span>
+                            <p>Photos taken</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback">
+
+            <div class="container">
+
+                <div class="feedback__content">
+
+                    <h2 class="feedback__title">Что говорят наши клиенты</h2>
+
+                    <div class="owl-carousel owl-theme feedback-carousel">
+
+                        <div class="feedback__item">
+
+                            <p class="item__badge">Landing page</p>
+
+                            <p class="item__text">&laquo;Рекомендую. Лендинг сделан быстро и качественно.&raquo;</p>
+
+                            <p class="item__name">Дмитрий</p>
+
+                        </div>
+
+                        <div class="feedback__item">
+
+                            <p class="item__badge">Вёрстка одной страницы</p>
+
+                            <p class="item__text">&laquo;Человек как палочка выручалочка! ).&raquo;</p>
+
+                            <p class="item__name">Макс</p>
+
+                        </div>
+
+                        <div class="feedback__item">
+
+                            <p class="item__badge">Front-end и back-end сайта</p>
+
+                            <p class="item__text">&laquo;Очень рад был поработать над проектом, конечно были неточности с моей стороны, Никита оперативно вносил корректировки по заданию.  Исполнителя рекомендую, возможно обращусь еще.&raquo;</p>
+
+                            <p class="item__name">Сергей</p>
+
+                        </div>
+
+                        <div class="feedback__item">
+
+                            <p class="item__badge">Landing page</p>
+
+                            <p class="item__text">&laquo;Отличная работа! Обращусь ещё. Рекомендую.&raquo;</p>
+
+                            <p class="item__name">Андрей</p>
+
+                        </div>
+
+                        <div class="feedback__item">
+
+                            <p class="item__badge">Landing page</p>
+
+                            <p class="item__text">&laquo;Работа выполнена качественно, быстрее указанного срока.
+                                Человек оказался исполнительным, также сделал небольшую поблажку на количество секций. Не было никаких замечаний по поводу заказа, все сделано согласно ТЗ. Могу рекомендовать Никиту как хорошего исполнителя!&raquo;</p>
+
+                            <p class="item__name">Елизавета</p>
+
+                        </div>
+
+                    </div>
+
+                    
 
                 </div>
 
@@ -338,6 +449,9 @@
 
     </footer>
 
+    <script src="libs/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>

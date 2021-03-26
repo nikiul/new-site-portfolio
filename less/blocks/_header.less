@@ -7,22 +7,25 @@
     // background-size: cover;
     // background-repeat: no-repeat;
     // background-position: center;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
+}
 
+.header__bg {
+    position: relative;
+    height: 100vh;
 
     &::before {
         position: absolute;
         content: "";
-        background-image: url("../img/header/header-bg1.jpg");
+        background-image: url("../img/header/header-bg2.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         // backdrop-filter: blur(5px);
-        opacity: 0.5;
+        opacity: 0.2;
         height: 100%;
         z-index: -1;
         top: 0;
@@ -41,10 +44,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #000;
-    padding-top: 20px;
-    padding-bottom: 20px;
     // background-color: #fff;
+}
+
+.header__content--border {
+    border: 2px solid #000;
+    padding: 20px;
 }
 
 .header__title-link {
@@ -52,31 +57,14 @@
     color: #000;
     margin: 0;
     margin-bottom: 39px;
-    font-weight: 700;
-    font-size: 38px;
+    font-weight: bold;
+    font-size: 80px;
     line-height: 130%;
     text-transform: uppercase;
-
-    @media (max-width: 1440px) {
-        font-size: 32px;
-        line-height: 100%;
-    }
-
-    @media (max-width: 1024px) {
-        font-size: 28px;
-    }
-
-    @media (max-width: 768px) {
-        font-size: 25px;
-    }
-
-    @media (max-width: 500px) {
-
-    }
 }
 
 .header__title {
-    // margin: 0;
+    margin: 0;
     // margin-bottom: 39px;
     // font-weight: 700;
     // font-size: 38px;
@@ -119,6 +107,7 @@
     text-decoration: none;
     color: #000;
     font-weight: 800;
+    font-size: 25px;
     text-transform: uppercase;
     margin: 0 10px;
 }
@@ -186,4 +175,21 @@
         margin: auto;
         border-radius: 0;
     }
+}
+
+.header__arrow-link {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    left: 48.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__arrow {
+    
+    // right: 50%;
 }
